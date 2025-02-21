@@ -1,0 +1,14 @@
+{
+  "name": "elasticsearch-sink-connector",
+  "config": {
+    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+    "tasks.max": "1",
+    "topics": "test.postgres_streaming_elasticsearch",
+    "connection.url": "http://172.30.2.76:9200",
+    "topic.index.map": "test.postgres_streaming_elasticsearch:products_data",
+    "transforms": "unwrap",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+    "key.ignore": "true",
+    "schema.ignore": "true"
+  }
+}

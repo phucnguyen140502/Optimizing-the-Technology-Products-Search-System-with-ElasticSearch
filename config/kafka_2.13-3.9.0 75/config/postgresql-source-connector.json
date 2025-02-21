@@ -1,0 +1,22 @@
+{
+  "name": "postgresql-source-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "172.30.2.75",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "Phuc@1NP",
+    "database.dbname": "postgres",
+    "database.server.name": "linux-ip-75",
+    "topic.prefix": "fulfillment",
+    "table.include.list": "public.products_data",
+    "plugin.name": "pgoutput",
+    "snapshot.mode": "never",
+    "include.schema.changes": "true",
+    "transforms": "route",
+    "transforms.route.type": "org.apache.kafka.connect.transforms.RegexRouter",
+    "transforms.route.regex": "([^.]+)\\.([^.]+)",
+    "transforms.route.replacement": "test.postgres_streaming_elasticsearch" 
+  }
+}
