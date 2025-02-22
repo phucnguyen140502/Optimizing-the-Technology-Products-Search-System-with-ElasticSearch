@@ -29,7 +29,23 @@ To address these issues, we enhanced the system by integrating ElasticSearch wit
 4. **Fast Query Execution:** When a user performs a search, ElasticSearch processes the query and returns results in under one second.
 
 ## System Architecture
-![image](https://github.com/user-attachments/assets/f5f5eb8c-809e-4778-8b1d-708cd845b91b)
+![image](https://github.com/user-attachments/assets/19c6775f-fbb8-4710-8c20-85019fd46ac3)
+
+#### Set up PostgreSQL and create source connector
+```
+systemctl status postgresql
+```
+![image](https://github.com/user-attachments/assets/cbfa659b-462d-475e-abd8-052047f06a30)
+
+![image](https://github.com/user-attachments/assets/7a06444d-6c43-42f7-8337-955e387eb424)
+
+#### Set up ElasticSearch and create sink connector
+```
+systemctl status elasticsearch
+```
+![image](https://github.com/user-attachments/assets/dcd1a6ab-de76-4036-94e9-2e04dc191911)
+
+![image](https://github.com/user-attachments/assets/8592511a-14d9-4648-beee-60cd9f028eea)
 
 
 - **PostgreSQL:** Manages the original product data and handles all update/insert operations.
